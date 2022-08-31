@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="report_template_here">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                <!-- <t t-call="report.external_layout"> -->
+                    <div class="page">
+                        <!--
+                        Build your report here!
+                        Do it in awesome way ;)
+                        -->
+                        <div class="oe_structure"/>
+                        <div class="text-center">
+                             <h2>TITLE FOR YOUR REPORT</h2>
+                        </div>
+                        <table class="table table-bordered mt32">
+
+                            <thead>
+                                <tr>
+                                    <th name="th_name" class="text-left">
+                                        <span>Name</span>
+                                    </th>
+                                    <th name="th_age" class="text-left">
+                                        <span>Age</span>
+                                    </th>
+
+                                </tr>
+                            </thead>
+<!--                            <t t-esc="docs"/>-->
+                            <t t-foreach='docs' t-as="var">
+                                <tr>
+                                    <td>
+                                        <span t-field="var.name"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="var.age"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+        </template>
+
+
+
+<!--        <template id="account_financial_print_report_template_here">-->
+<!--            <t t-call="web.html_container">-->
+<!--                <t t-foreach="docs" t-as="doc">-->
+<!--                    <t t-call="web.external_layout">-->
+<!--                        <div class="page">-->
+<!--                            <div class="oe_structure"/>-->
+<!--                            <div class="text-center"/>-->
+<!--                            <table class="table table-bordered mt32">-->
+<!--                            <thead>-->
+<!--                                <tr>-->
+<!--                                    <th name="th_name" class="text-left">-->
+<!--                                        <span>Sample</span>-->
+<!--                                    </th>-->
+<!--                                </tr>-->
+<!--                            </thead>-->
+<!--                            <t t-foreach="docs" t-as="sample">-->
+<!--                                <tr>-->
+<!--                                    <td>-->
+<!--                                        <span t-field="sample.name"/>-->
+<!--                                    </td>-->
+<!--                                </tr>-->
+<!--                            </t>-->
+<!--                        </table>-->
+<!--                        </div>-->
+<!--                    </t>-->
+<!--                </t>-->
+<!--            </t>-->
+<!--        </template>-->
+
+    </data>
+</odoo>
